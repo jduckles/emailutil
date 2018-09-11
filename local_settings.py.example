@@ -1,0 +1,5 @@
+smtp_user=""
+smtp_passwd=""
+smtp_host="host:port"
+default_sender="me@there.org"
+
