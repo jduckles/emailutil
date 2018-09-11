@@ -2,13 +2,6 @@
 
 Quick and dirty mass emailer using Jinja2 Templates and CSV context. 
 
-Step 1: 
-
-```
-mv local_settings.py.example local_settings.py
-```
-Edit local settings as appropriate for your configuration
-
 ## Step 1 - configure settings
 
 ```
