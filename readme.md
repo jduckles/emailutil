@@ -2,6 +2,12 @@
 
 Quick and dirty mass emailer using Jinja2 Templates and CSV context. 
 
+## Step 0 - requirements
+
+```
+pip install -r requirements.txt
+```
+
 ## Step 1 - configure settings
 
 ```
@@ -19,7 +25,7 @@ Simple template example:
 ```
 Dear {{ firstname }},
 
-Hello, how are you?
+Hello, how are you? How are things at {{ organization }}?
 
 Regards,
 Jonah
@@ -30,12 +36,12 @@ Jonah
 CSV must have column named email for use as the `To:` email address.
 
 ```
-firstname,lastname,email
-John,Doe,me@here.org
+firstname,lastname,email,
+John,Doe,me@here.org,Awesome Inc.
 ```
 
 # Step 3.5 - Test on yourself
-Using a CSV which has jus you as the sender and test data, send a test email to yourself to confirm formatting and template merge is working correctly. 
+Using a CSV which has only your email as the recipient and some test data, send a test email to yourself to confirm formatting and template merge is working correctly. 
 
 
 ## Step 4 - Send many emails!  
