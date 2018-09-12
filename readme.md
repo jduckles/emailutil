@@ -2,6 +2,12 @@
 
 Quick and dirty mass emailer using Jinja2 Templates and CSV context. 
 
+## Step 0 - requirements
+
+```
+pip install -r requirements.txt
+```
+
 ## Step 1 - configure settings
 
 ```
