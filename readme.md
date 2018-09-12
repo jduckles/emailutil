@@ -5,20 +5,22 @@ Quick and dirty mass emailer using Jinja2 Templates and CSV context.
 Help text:
 
 ```
-usage: send_email.py [-h] context template subject
+usage: send_email.py [-h] [-q] [-d] context template subject
 
 positional arguments:
-  context     Path to a CSV file with the data context for the template. Each
-              row in the CSV will result in one sent email. The template is
-              filled with associated data from a given row. Must have a column
-              named 'email' for To: address.
-  template    Path to a Jinja2 template file that can be filled by the context
-  subject     Quoted string with email's subject line, subject string is NOT
-              filled as a template
+  context       Path to a CSV file with the data context for the template.
+                Each row in the CSV will result in one sent email. The
+                template is filled with associated data from a given row. Must
+                have a column named 'email' for To: address.
+  template      Path to a Jinja2 template file that can be filled by the
+                context
+  subject       Quoted string with email's subject line, subject string is NOT
+                filled as a template
 
 optional arguments:
-  -h, --help  show this help message and exit
-
+  -h, --help    show this help message and exit
+  -q, --quiet   Supress printing of all filled templates.
+  -d, --dryrun  Don't actually send emails, just print them to screen.
 ```
 
 
