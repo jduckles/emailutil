@@ -35,7 +35,7 @@ John,Doe,me@here.org,Awesome Inc.
 ```
 
 # Step 3.5 - Test on yourself
-Using a CSV which has jus you as the sender and test data, send a test email to yourself to confirm formatting and template merge is working correctly. 
+Using a CSV which has only your email as the recipient and some test data, send a test email to yourself to confirm formatting and template merge is working correctly. 
 
 
 ## Step 4 - Send many emails!  
