@@ -30,8 +30,8 @@ Jonah
 CSV must have column named email for use as the `To:` email address.
 
 ```
-firstname,lastname,email
-John,Doe,me@here.org
+firstname,lastname,email,
+John,Doe,me@here.org,Awesome Inc.
 ```
 
 # Step 3.5 - Test on yourself
