@@ -19,7 +19,7 @@ Simple template example:
 ```
 Dear {{ firstname }},
 
-Hello, how are you?
+Hello, how are you? How are things at {{ organization }}?
 
 Regards,
 Jonah
