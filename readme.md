@@ -38,11 +38,18 @@ mv local_settings.py.example local_settings.py
 ```
 Edit local settings as appropriate for your configuration
 
-## Step2 - setup Template
+```
+smtp_user="" # Username for SMTP server
+smtp_passwd="" # Password for SMTP server
+smtp_host="host:port" # Assumes StartTLS support at server
+default_sender="me@there.org <My Name>" # Who should the emails be from?
+```
 
-Using a csv file with a header row and an HTML Jinja2 template, send an email
-for each row of the csv, entering data from the csv in the Jinja2 template
-as appropriate. 
+## Step2 - Setup a Template
+
+Using a csv file with a header row and an HTML Jinja2 template ([docs](http://jinja.pocoo.org/docs/2.10/templates/)), 
+send an email
+for each row of the csv, filling the template with data from the csv. 
 
 Simple template example:
 ```
@@ -63,12 +70,20 @@ firstname,lastname,email,
 John,Doe,me@here.org,Awesome Inc.
 ```
 
-# Step 3.5 - Test on yourself
+# Step 3.5 - Dry-run then test on yourself
 Using a CSV which has only your email as the recipient and some test data, send a test email to yourself to confirm formatting and template merge is working correctly. 
+
+```
+# Dry run (no emails sent, test template/context merge)
+./send_email.py -d examples\test.csv examples\test.html "Subject Line"
+```
 
 
 ## Step 4 - Send many emails!  
 
 ```
-python3 send_email.py examples\test.csv examples\test.html "Subject Line"
+./send_email.py examples\test.csv examples\test.html "Subject Line"
+# or
+./send_email.py -q examples\test.csv examples\test.html "Subject Line"
+# to supress all email's being printed to stdout as well as being sent via SMTP
 ```
