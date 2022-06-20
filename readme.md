@@ -2,6 +2,9 @@
 
 Quick and dirty mass emailer using Jinja2 Templates and CSV context. 
 
+
+**Note:** With today's anti-spam measures in place at many mail servers, it is probably best that you don't use your Gmail or other business mail accounts with this script for more than 10s of emails. Uses something like MailGun to do your bulk sending. 
+
 Help text:
 
 ```
